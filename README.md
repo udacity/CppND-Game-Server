@@ -26,3 +26,18 @@ bash make_main.sh poker_server
 ## Step 3: Investigate the output
 
 Follow along with Robin as we investigate the output of these bash scripts!
+
+## Step 4: Build your project
+Run the following commands to build your project:
+
+```
+mkdir build
+cd build
+cmake
+make
+ctest
+```
+
+## Step 5: Investigate the output
+
+Follow along with Robin as we investigate the output of these commands!
