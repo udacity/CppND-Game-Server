@@ -1,4 +1,4 @@
-# C++ Poker Game Server
+# C++ Game Server
 
 In this project you'll build an autonomous, multi-processor, multi-threaded game server! Start by forking this repository and following the instructions below.
 
