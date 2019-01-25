@@ -10,6 +10,7 @@ class Timer
 	void operator=(const Timer&) = delete;
 
 public:
+	void Print(bool isNewline = true) const;
 	~Timer()
 	{}
 	Timer()
@@ -17,9 +18,6 @@ public:
 	bool operator!() const
 	{	return true;
 	}
-	
-	void Print() const
-	{}
 };
 
 #endif

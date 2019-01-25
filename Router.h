@@ -19,7 +19,7 @@ class Router
 public:
 	void Print(bool isNewline = true) const;
 	bool Route(char* line);
-	bool Dispatch(Table& table);
+	bool Dispatch(Table& table,char* line);
 	~Router()
 	{}
 	Router()
@@ -28,6 +28,9 @@ public:
 	{}
 	bool operator!() const
 	{	return true;
+	}
+	unsigned GetToId() const
+	{	return toId;
 	}
 };
 

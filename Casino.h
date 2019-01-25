@@ -21,8 +21,15 @@ class Casino
 	Bank bank;
 	Router router;
 	std::array<char,80> line;
+	bool IsInvalidTable(unsigned tableNo)
+	{	return tableNo >= tables.size();
+	}	
+	bool IsInvalidPlayer(unsigned playerId)
+	{	return playerId >= players.size();
+	}
 public:
 	void Print(bool isNewline = true) const;
+	void PrintPlayers(bool isNewline = true) const;
 	int Run();
 	bool AddPlayer(const char* line);
 	bool AddTable(const char* table);
