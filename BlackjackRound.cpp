@@ -5,6 +5,6 @@
 #include <stdio.h>
 #include "BlackjackRound.h"
 
-void BlackjackRound::Print(bool isNewline)
+void BlackjackRound::Print(bool isNewline) const
 {	printf("BlackjackRound%c",isNewline ? '\n':' ');
 } 

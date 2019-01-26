@@ -4,7 +4,26 @@
 
 #include <stdio.h>
 #include "Router.h"
+#include "Table.h"
 
 void Router::Print(bool isNewline) const
-{	printf("Router%c",isNewline ? '\n':' ');
+{	printf("Router: %u%u%c",fromId,toId,isNewline ? '\n':' ');
 } 
+
+bool Router::Route(char* line)
+{	// Format: FromId ToId Verb Params...
+	std::istringstream is(line);
+	fromId = 0;
+	is >> fromId;
+	toId = 0;
+	is >> toId;
+	if(!fromId || !toId)
+	{	return false;
+	}
+	return true;
+}
+
+bool Router::Dispatch(Table& table,char* line)
+{	return table.Dispatch(fromId,line);
+}
+

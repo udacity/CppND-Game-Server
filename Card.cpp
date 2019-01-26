@@ -5,6 +5,11 @@
 #include <stdio.h>
 #include "Card.h"
 
-void Card::Print(bool isNewline)
-{	printf("Card%c",isNewline ? '\n':' ');
-} 
+void Card::Print(bool isNewline) const
+{	if(!*this)
+	{	return;
+	}
+	const char* showRank = "0023456789TJQKA";
+	const char* showSuit = "cdhs";
+	printf("%c%c%c", showRank[rank],showSuit[suit],isNewline?'\n':' ');		
+}

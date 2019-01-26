@@ -1,10 +1,20 @@
 // Player.cpp
-// Created by Robin Rowe 2019-01-25
+// Created by Robin Rowe 2019-01-10
 // License MIT open source
 
-#include <stdio.h>
 #include "Player.h"
+#include "Table.h"
 
-void Player::Print(bool isNewline)
-{	printf("Player%c",isNewline ? '\n':' ');
-} 
+bool Player::SitDown(Table& table)
+{
+	return false;
+}
+
+bool Player::StandUp()
+{	
+	return false;
+}
+
+void Player::Print() const
+{	printf("%s", name.c_str());
+}

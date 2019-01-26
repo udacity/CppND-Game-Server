@@ -5,6 +5,6 @@
 #include <stdio.h>
 #include "Timer.h"
 
-void Timer::Print(bool isNewline)
+void Timer::Print(bool isNewline) const
 {	printf("Timer%c",isNewline ? '\n':' ');
 } 
